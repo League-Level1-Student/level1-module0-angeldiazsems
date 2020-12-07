@@ -4,8 +4,14 @@ package _02_my_first_swing_gui;
  *    Level 1
  */
 
+import javax.swing.JFrame;
+
 public class MyFirstSwingGUIRunner {
 	public static void main(String[] args) {
 		new MyFirstSwingGUI().run();
+	
+		
+	
+	
 	}
 }
