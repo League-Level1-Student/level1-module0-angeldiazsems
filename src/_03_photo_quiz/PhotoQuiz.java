@@ -37,9 +37,12 @@ quizWindow.add(comp);
 		// 5. call the pack() method on the quiz window
 quizWindow.pack();
 		// 6. ask a question that relates to the image
-
+String input = JOptionPane.showInputDialog("What is this?")
 		// 7. print "CORRECT" if the user gave the right answer
-
+if(input==("alien")) {
+	
+JOptionPane.showMessageDialog(null, "CORRECT");	
+}
 		// 8. print "INCORRECT" if the answer is wrong
 
 		// 9. remove the component from the quiz window (you may not see the
