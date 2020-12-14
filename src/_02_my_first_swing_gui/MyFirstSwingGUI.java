@@ -23,25 +23,27 @@ frame.setVisible(true);
 		// small.
 
 		// 4. Use your JFrame to call setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
-
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// 5. Declare and initialize an object of the JPanel class
-	
+	JPanel panel = new JPanel();
 		// 6. Declare and initialize an object of the JLabel class
-
+	JLabel label = new JLabel();
 		// 7. Set the text of the JLabel to a lovely greeting
-
+String greeting = "Hello, how are you doing?";
+label.setText(greeting);
 		// 8. Add the JPanel object to the JFrame
-
+frame.add(panel);
 		// 9. Add the JLabel object to the JPanel
-
+panel.add(label);
 		// 10. Pack your JFrame
 
+frame.pack();
 		// 11. Run your program again. Do you see your message?
 
 		// 12. Use your JLabel to call setIcon(loadImage())
-
+label.setIcon(loadImage());
 		// 13. Re-pack the JFrame object
-
+frame.pack();
 		// 14. Run the program one more time. Do you see the image?
 
 	}

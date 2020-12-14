@@ -13,6 +13,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 public class PhotoQuiz {
 
@@ -26,15 +27,15 @@ public class PhotoQuiz {
 		// 1. find an image on the internet, and put its URL in a String
 		// variable (from your browser, right click on the image, and select
 		// “Copy Image Address”)
-
+String Alien = "https://icons.iconarchive.com/icons/webalys/kameleon.pics/256/Alien-icon.png";
 		// 2. create a variable of type "Component" that will hold your image
 
 		// 3. use the "createImage()" method below to initialize your Component
-
+Component comp = createImage(Alien);
 		// 4. add the image to the quiz window
-
+quizWindow.add(comp);
 		// 5. call the pack() method on the quiz window
-
+quizWindow.pack();
 		// 6. ask a question that relates to the image
 
 		// 7. print "CORRECT" if the user gave the right answer
