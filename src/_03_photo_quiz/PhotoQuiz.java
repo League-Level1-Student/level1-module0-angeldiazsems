@@ -37,27 +37,37 @@ quizWindow.add(comp);
 		// 5. call the pack() method on the quiz window
 quizWindow.pack();
 		// 6. ask a question that relates to the image
-String input = JOptionPane.showInputDialog("What is this?")
+String input = JOptionPane.showInputDialog("What is this?");
 		// 7. print "CORRECT" if the user gave the right answer
-if(input==("alien")) {
+if(input.equals("alien")) {
 	
 JOptionPane.showMessageDialog(null, "CORRECT");	
 }
 		// 8. print "INCORRECT" if the answer is wrong
+else {
+	JOptionPane.showMessageDialog(null, "INCORRECT");	
 
+}
 		// 9. remove the component from the quiz window (you may not see the
 		// effect of this until step 12)
-
+quizWindow.remove(comp);
 		// 10. find another image and create it (might take more than one line
 		// of code)
-
+String Crab = "https://icons.iconarchive.com/icons/google/noto-emoji-animals-nature/256/22299-crab-icon.png";
+Component comp2 = createImage(Crab);		
 		// 11. add the second image to the quiz window
-
+quizWindow.add(comp2);
 		// 12. pack the quiz window
-
+quizWindow.pack();
 		// 13. ask another question
-
+String input2 = JOptionPane.showInputDialog("What is this");
 		// 14+ check answer, say if correct or incorrect, etc.
+if(input2 .equals ("crab")) {
+	JOptionPane.showMessageDialog(null, "CORRECT");
+}
+else {
+	JOptionPane.showMessageDialog(null, "INCORRECT");
+}
 
 	}
 
