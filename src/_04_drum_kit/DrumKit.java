@@ -22,7 +22,7 @@ import javax.swing.JPanel;
 public class DrumKit implements MouseListener {
 
 	JLabel drumLabelWithImage;
-
+	JLabel anotherDrumLabelWithImage;
 	public void run() throws MalformedURLException {
 
 		// 1. Make a JFrame variable and initialize it using "new JFrame()"
@@ -49,6 +49,7 @@ String drum = "cymbal.jpg";
 
 		// 10. Add the image to the panel
 panel.add(drumLabelWithImage);
+
 		// 11. Set the layout of the panel to "new GridLayout()"
 new GridLayout();
 		// 12. call the pack() method on the frame. Run your program. Do you see
@@ -56,9 +57,16 @@ new GridLayout();
 frame.pack();
 		// 13. add this mouse listener to drumLabelWithImage
 drumLabelWithImage.addMouseListener(this);
+
 		// 18. Add more images to make a drumkit. Remember to add this mouse
 		// listener to each one.
 String anotherdrum = "snare.jpg";
+anotherDrumLabelWithImage = createLabelImage(anotherdrum);
+panel.add(anotherDrumLabelWithImage);
+new GridLayout();
+frame.pack();
+anotherDrumLabelWithImage.addMouseListener(this);
+
 
 	}
 
@@ -78,6 +86,10 @@ String anotherdrum = "snare.jpg";
 if(drumClicked == drumLabelWithImage){
 	JOptionPane.showMessageDialog(null, "BAM");
 }
+if(drumClicked == anotherDrumLabelWithImage) {
+	JOptionPane.showMessageDialog(null, "CRASH");
+}
+	
 		// 17. ...use the playSound method to play a drum sound. Test to see if
 		// it works
 

@@ -42,7 +42,7 @@ public class BodyPartQuiz {
 
 		// 3. Change the size of the window so that you can only see part of the
 		// image.
-		window.setSize(500, 500);
+		window.setSize(200,200);
 
 		showNextImage();
 
@@ -51,13 +51,18 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-
+int score = 0;
 		// 2. Set the size of the window in the initializeGui() method 
 
 		// 4. Ask the user who this person is and store their answer
 		String guess = JOptionPane.showInputDialog("who is this?");
-
-		// 5. Check their answer. If they guessed correctly:
+if(guess .equals("arnold") ) {
+	JOptionPane.showMessageDialog(null, "Correct! Your score is "+ ++score);
+}
+else {
+	JOptionPane.showMessageDialog(null, "WRONG, ITS ARNOLD");
+}
+// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
 
 		// 6. Otherwise:
@@ -65,11 +70,33 @@ public class BodyPartQuiz {
 
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
-
+		String guess2 = JOptionPane.showInputDialog("who is this?");
+		if(guess2 .equals("leonardo") ) {
+			JOptionPane.showMessageDialog(null, "Correct! Your score is "+ ++score);
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "WRONG, ITS LEONARDO");
+		}
+		showNextImage();
+		String guess3 = JOptionPane.showInputDialog("who is this?");
+		if(guess3 .equals("morgan") ) {
+			JOptionPane.showMessageDialog(null, "Correct! Your score is "+ ++score);
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "WRONG, ITS MORGAN");
+		}
+		showNextImage();
+		String guess4 = JOptionPane.showInputDialog("who is this?");
+		if(guess4 .equals("jack") ) {
+			JOptionPane.showMessageDialog(null, "Correct! Your score is "+ ++score);
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "WRONG, ITS JACK");
+		}
 		// 8. .... repeat 4-7 for all your images.....
 
 		// 9. Show them their current score
-
+JOptionPane.showMessageDialog(null, "Your final score is "+score+" /4");
 	}
 
 	public void showNextImage() {
