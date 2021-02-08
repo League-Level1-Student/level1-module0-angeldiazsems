@@ -13,9 +13,9 @@ import javax.swing.JPanel;
 public class soundmachine implements ActionListener {
 	int buttonpressed = 0;
 	JButton button = new JButton("water-click");
-    JButton button2 = new JButton("sound2");
-    JButton button3 = new JButton("sound3");
-    JButton button4 = new JButton("sound4");
+    JButton button2 = new JButton("sawing-wood");
+    JButton button3 = new JButton("walking-in-long-grass");
+    JButton button4 = new JButton("piano-melody");
 	public void showButton() {
         JFrame frame = new JFrame();
         frame.setVisible(true);
@@ -40,7 +40,15 @@ public class soundmachine implements ActionListener {
 if(button == arg0.getSource()) {
 	playSound("371274__mafon2__water-click.wav");
 }
-	
+if(button2 == arg0.getSource()) {
+	playSound("sawing-wood-daniel_simon.wav");
+}
+if(button3 == arg0.getSource()) {
+	playSound("155589__leafs67__walking-in-long-grass.wav");
+}
+if(button4 == arg0.getSource()) {
+	playSound("186942__lemoncreme__piano-melody.wav");
+}	
 	}
 	private void playSound(String fileName) {
 	     AudioClip sound = JApplet.newAudioClip(getClass().getResource(fileName)); 
